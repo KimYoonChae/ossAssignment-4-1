@@ -1,0 +1,84 @@
+{
+  "books": [
+    {
+      "title": "데미안",
+      "author": "헤",
+      "genre": "소설",
+      "status": "읽을 예정",
+      "rating": 5,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "title": "클린 코드",
+      "author": "로버트 C. 마틴",
+      "genre": "개발",
+      "status": "읽음",
+      "rating": 4
+    },
+    {
+      "id": "3",
+      "title": "코스모스",
+      "author": "칼 세이건",
+      "genre": "과학",
+      "status": "읽는 중",
+      "rating": 5
+    },
+    {
+      "id": "4",
+      "title": "총, 균, 쇠",
+      "author": "재레드 다이아몬드",
+      "genre": "역사",
+      "status": "읽음",
+      "rating": 4
+    },
+    {
+      "id": "5",
+      "title": "멋진 신세계",
+      "author": "올더스 헉슬리",
+      "genre": "디스토피아",
+      "status": "읽을 예정",
+      "rating": 0
+    },
+    {
+      "id": "6",
+      "title": "이방인",
+      "author": "알베르 카뮈",
+      "genre": "소설",
+      "status": "읽음",
+      "rating": 4
+    },
+    {
+      "id": "7",
+      "title": "죽음의 수용소에서",
+      "author": "빅터 E. 프랭클",
+      "genre": "심리",
+      "status": "읽음",
+      "rating": 5
+    },
+    {
+      "id": "9",
+      "title": "머신러닝 완벽 가이드",
+      "author": "존 도",
+      "genre": "기술",
+      "status": "읽을 예정",
+      "rating": 0
+    },
+    {
+      "id": "10",
+      "title": "사피엔스",
+      "author": "유발 하라리",
+      "genre": "인류학",
+      "status": "읽음",
+      "rating": 5
+    },
+    {
+      "id": "11",
+      "title": "1984",
+      "author": "조지 오웰",
+      "genre": "디스토피아",
+      "status": "읽음",
+      "rating": 5
+    }
+  ]
+}
