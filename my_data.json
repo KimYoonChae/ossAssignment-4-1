@@ -1,14 +1,6 @@
 {
   "books": [
     {
-      "title": "데미안",
-      "author": "헤",
-      "genre": "소설",
-      "status": "읽을 예정",
-      "rating": 5,
-      "id": "1"
-    },
-    {
       "id": "2",
       "title": "클린 코드",
       "author": "로버트 C. 마틴",
@@ -25,20 +17,12 @@
       "rating": 5
     },
     {
-      "id": "4",
       "title": "총, 균, 쇠",
       "author": "재레드 다이아몬드",
-      "genre": "역사",
+      "genre": "역사장르",
       "status": "읽음",
-      "rating": 4
-    },
-    {
-      "id": "5",
-      "title": "멋진 신세계",
-      "author": "올더스 헉슬리",
-      "genre": "디스토피아",
-      "status": "읽을 예정",
-      "rating": 0
+      "rating": 4,
+      "id": "4"
     },
     {
       "id": "6",
@@ -79,6 +63,94 @@
       "genre": "디스토피아",
       "status": "읽음",
       "rating": 5
+    },
+    {
+      "id": "514a",
+      "title": "김",
+      "author": "김",
+      "genre": "역사장르",
+      "status": "읽는 중",
+      "rating": 0
+    },
+    {
+      "id": "12",
+      "title": "모던 자바스크립트 Deep Dive",
+      "author": "이웅모",
+      "genre": "개발",
+      "status": "읽는 중",
+      "rating": 4
+    },
+    {
+      "id": "13",
+      "title": "미움받을 용기",
+      "author": "기시미 이치로",
+      "genre": "자기계발",
+      "status": "읽음",
+      "rating": 5
+    },
+    {
+      "id": "14",
+      "title": "해리포터와 마법사의 돌",
+      "author": "J.K. 롤링",
+      "genre": "판타지",
+      "status": "읽음",
+      "rating": 4
+    },
+    {
+      "id": "15",
+      "title": "숨결이 바람 될 때",
+      "author": "폴 칼라니티",
+      "genre": "에세이",
+      "status": "읽음",
+      "rating": 5
+    },
+    {
+      "id": "16",
+      "title": "호모 데우스",
+      "author": "유발 하라리",
+      "genre": "미래학",
+      "status": "읽을 예정",
+      "rating": 0
+    },
+    {
+      "id": "17",
+      "title": "파친코",
+      "author": "이민진",
+      "genre": "역사소설",
+      "status": "읽는 중",
+      "rating": 3
+    },
+    {
+      "id": "18",
+      "title": "달과 6펜스",
+      "author": "윌리엄 서머싯 모옴",
+      "genre": "소설",
+      "status": "읽음",
+      "rating": 4
+    },
+    {
+      "id": "19",
+      "title": "원씽",
+      "author": "게리 켈러",
+      "genre": "자기계발",
+      "status": "읽을 예정",
+      "rating": 0
+    },
+    {
+      "id": "20",
+      "title": "작별하지 않는다",
+      "author": "한강",
+      "genre": "소설",
+      "status": "읽음",
+      "rating": 5
+    },
+    {
+      "id": "21",
+      "title": "나는 나로 살기로 했다",
+      "author": "김수현",
+      "genre": "에세이",
+      "status": "읽는 중",
+      "rating": 2
     }
   ]
 }
