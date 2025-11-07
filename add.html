@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="my.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Boogie</title>
+</head>
+    <body>
+         <div class="header">
+            <img src="logo.svg" alt="logo" class="logo"/>
+        </div>
+        <div class="container">
+            <form onsubmit="return validateForm()">
+                <h2>게시글 작성</h2>
+                <hr/>
+                <div class="d-flex gap-3 mb-3">
+                    <div class="flex-grow-1">
+                        <label for="nickname" class="input-label">닉네임</label>
+                        <input type="text" id="nickname" placeholder="닉네임을 입력해주세요!" class="form-control">
+                    </div>
+                    <div class="flex-grow-1">
+                        <label for="date" class="input-label">날짜</label>
+                        <input type="date" id="date" class="form-control">
+                    </div>
+                </div>
+                <label for="title" class="input-label">제목</label>
+                <textarea name="title" id="title" placeholder="제목을 입력해주세요!" class="input-textarea" rows="2"></textarea><br/>
+
+                <label for="content" class="input-label">내용</label>
+                <textarea name="content" id="content" placeholder="내용을 입력해주세요!" class="input-textarea" rows="10"></textarea><br/>
+
+                <hr/>
+
+                <label class="input-label">카테고리</label>
+                <div class="mb-3">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="category" id="category-novel" value="novel" checked>
+                        <label class="form-check-label" for="category-novel">소설</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="category" id="category-essay" value="essay">
+                        <label class="form-check-label" for="category-essay">에세이</label>
+                    </div>
+                </div>
+
+                <div class="form-check form-switch mb-3">
+                    <input class="form-check-input" type="checkbox" role="switch" id="is-public" checked>
+                    <label class="form-check-label" for="is-public">공개 글로 발행</label>
+                </div>
+                
+                <div class="d-flex justify-content-end gap-2 mt-3">
+                    <a href="index.html" class="btn btn-secondary">취소</a>
+                    <button type="submit" class="btn btn-success">확인</button>
+                </div>
+            </form>
+        </div>
+        
+        <script>
+            function validateForm() {
+                const nickname = document.getElementById('nickname').value.trim();
+                const date = document.getElementById('date').value;
+                const title = document.getElementById('title').value.trim();
+                const content = document.getElementById('content').value.trim();
+
+                if (nickname === "") {
+                    alert("닉네임을 입력해주세요.");
+                }
+                if (date === "") {
+                    alert("날짜를 선택해주세요.");
+                    return false;
+                }
+                if (title === "") {
+                    alert("제목을 입력해주세요.");
+                    return false;
+                }
+                if (content === "") {
+                    alert("내용을 입력해주세요.");
+                    return false;
+                }
+
+                alert("게시물이 추가됩니다.");
+                return true;
+            }
+        </script>
+    </body>
+</html>
