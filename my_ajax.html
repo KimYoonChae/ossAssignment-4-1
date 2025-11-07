@@ -98,19 +98,10 @@
 
         <div class="card mt-4">
           <div class="card-body api-config">
-            <h2 class="h6">API 연결 설정</h2>
-            <p class="mb-1">현재 API 엔드포인트: <code id="api-base"></code></p>
-            <p class="small mb-1">로컬 개발: <code>http://localhost:3000/books</code></p>
-            <p class="small">Netlify 배포: <code>https://my-json-server.typicode.com/&lt;GitHub-사용자명&gt;/&lt;저장소명&gt;/books</code></p>
-            <form id="api-config-form" class="row g-2">
-              <div class="col-12">
-                <input type="url" id="api-base-input" class="form-control" placeholder="https://my-json-server.typicode.com/사용자명/저장소명/books">
-              </div>
-              <div class="col-12 d-flex gap-2">
-                <button type="submit" class="btn btn-outline-primary flex-grow-1">엔드포인트 저장</button>
-                <button type="button" id="reset-api-base" class="btn btn-outline-secondary">초기화</button>
-              </div>
-            </form>
+            <h2 class="h6">API 연결 안내</h2>
+            <p class="mb-1">버튼 클릭 없이 항상 동일한 엔드포인트를 사용합니다.</p>
+            <p class="small mb-1">현재 API 엔드포인트: <code id="api-base"></code></p>
+            <p class="small mb-0">필요 시 이 상수를 수정하여 다른 서버로 교체할 수 있습니다.</p>
           </div>
         </div>
       </div>
@@ -149,14 +140,7 @@
   </div>
 
   <script>
-    const LOCAL_API = 'http://localhost:3000/books';
-    const REMOTE_API_PLACEHOLDER = 'https://my-json-server.typicode.com/your-github-username/your-repo/books';
-
-    const initialApiBase = (['localhost', '127.0.0.1'].includes(window.location.hostname))
-      ? LOCAL_API
-      : localStorage.getItem('apiBaseUrl') || REMOTE_API_PLACEHOLDER;
-
-    let API_BASE_URL = initialApiBase;
+    const API_BASE_URL = 'http://localhost:3000/books';
 
     const tableBody = document.querySelector('#book-table tbody');
     const feedbackEl = document.getElementById('feedback');
@@ -165,17 +149,7 @@
     const resetButton = document.getElementById('reset-form');
     const deleteSelectedButton = document.getElementById('delete-selected');
     const refreshButton = document.getElementById('refresh-button');
-    const apiConfigForm = document.getElementById('api-config-form');
-    const apiBaseInput = document.getElementById('api-base-input');
-    const resetApiBaseButton = document.getElementById('reset-api-base');
-
-    function updateApiBaseDisplay(url) {
-      API_BASE_URL = url;
-      apiBaseEl.textContent = url;
-      apiBaseInput.value = url;
-    }
-
-    updateApiBaseDisplay(initialApiBase);
+    apiBaseEl.textContent = API_BASE_URL;
 
     function showFeedback(message, type = 'success') {
       feedbackEl.textContent = message;
@@ -364,27 +338,6 @@
     });
 
     refreshButton.addEventListener('click', () => {
-      fetchBooks();
-    });
-
-    apiConfigForm.addEventListener('submit', (event) => {
-      event.preventDefault();
-      const newBase = apiBaseInput.value.trim();
-      if (!newBase) {
-        showFeedback('API 엔드포인트를 입력해 주세요.', 'warning');
-        return;
-      }
-      localStorage.setItem('apiBaseUrl', newBase);
-      updateApiBaseDisplay(newBase);
-      showFeedback('API 엔드포인트를 저장했습니다. 목록을 다시 불러옵니다.', 'info');
-      fetchBooks();
-    });
-
-    resetApiBaseButton.addEventListener('click', () => {
-      localStorage.removeItem('apiBaseUrl');
-      const defaultUrl = (['localhost', '127.0.0.1'].includes(window.location.hostname)) ? LOCAL_API : REMOTE_API_PLACEHOLDER;
-      updateApiBaseDisplay(defaultUrl);
-      showFeedback('API 엔드포인트를 기본값으로 되돌렸습니다.', 'info');
       fetchBooks();
     });
 
